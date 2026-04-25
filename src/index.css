@@ -124,13 +124,14 @@ body {
 }
 
 .title {
-  font-size: 4rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   color: var(--text-primary);
   text-transform: uppercase;
   /* Optional slight glow */
-  text-shadow: 0 0 40px rgba(199, 125, 255, 0.2);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
 }
 
 .footer {

@@ -44,6 +44,7 @@ body {
   position: absolute;
   border-radius: 50%;
   opacity: 0.08; /* Increased transparency */
+  will-change: translate;
 }
 
 /* Silver / Off-White Blob */
@@ -51,9 +52,13 @@ body {
   width: 600px;
   height: 600px;
   background-color: #f8fafc; /* Very light silver/off-white */
-  top: -100px;
-  left: -100px;
-  animation: moveBlob1 15s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
+  animation: orbit1 24s infinite alternate ease-in-out;
+  translate: calc(var(--mouse-x, 0) * -6vw) calc(var(--mouse-y, 0) * -6vh);
+  transition: translate 0.8s ease-out;
 }
 
 /* Medium Silver Blob */
@@ -61,9 +66,13 @@ body {
   width: 500px;
   height: 500px;
   background-color: #cbd5e1; /* Silver */
-  bottom: -50px;
-  right: -50px;
-  animation: moveBlob2 18s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  animation: orbit2 28s infinite alternate ease-in-out;
+  translate: calc(var(--mouse-x, 0) * 10vw) calc(var(--mouse-y, 0) * 10vh);
+  transition: translate 1.2s ease-out;
 }
 
 /* Darker Silver/Slate Blob */
@@ -73,30 +82,33 @@ body {
   background-color: #94a3b8; /* Slate/Dark Silver */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  animation: moveBlob3 22s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: -350px;
+  margin-left: -350px;
+  animation: orbit3 32s infinite alternate ease-in-out;
+  translate: calc(var(--mouse-x, 0) * -4vw) calc(var(--mouse-y, 0) * -4vh);
+  transition: translate 1.8s ease-out;
 }
 
-/* Agitated Animations */
-@keyframes moveBlob1 {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(20vw, 15vh) scale(1.2); }
-  66% { transform: translate(10vw, 40vh) scale(0.9); }
-  100% { transform: translate(40vw, 10vh) scale(1.1); }
+/* 3-Body System Chaotic Orbits */
+@keyframes orbit1 {
+  0%       { transform: translate(15vw, -20vh) scale(1); }
+  33%      { transform: translate(-25vw, 15vh) scale(1.1); }
+  66%      { transform: translate(20vw, 25vh) scale(0.9); }
+  100%     { transform: translate(-10vw, -15vh) scale(1.05); }
 }
 
-@keyframes moveBlob2 {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-25vw, -20vh) scale(1.1); }
-  66% { transform: translate(-15vw, -45vh) scale(0.8); }
-  100% { transform: translate(-45vw, -10vh) scale(1.2); }
+@keyframes orbit2 {
+  0%       { transform: translate(-25vw, 20vh) scale(0.9); }
+  33%      { transform: translate(20vw, -20vh) scale(1); }
+  66%      { transform: translate(-15vw, -25vh) scale(1.1); }
+  100%     { transform: translate(25vw, 15vh) scale(0.95); }
 }
 
-@keyframes moveBlob3 {
-  0% { transform: translate(-50%, -50%) scale(1); }
-  33% { transform: translate(-30%, -70%) scale(1.1); }
-  66% { transform: translate(-70%, -30%) scale(0.9); }
-  100% { transform: translate(-20%, -40%) scale(1.1); }
+@keyframes orbit3 {
+  0%       { transform: translate(0vw, 5vh) scale(1.1); }
+  33%      { transform: translate(25vw, 10vh) scale(0.9); }
+  66%      { transform: translate(-20vw, -15vh) scale(1); }
+  100%     { transform: translate(10vw, -25vh) scale(1.05); }
 }
 
 .content {

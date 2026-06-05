@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /steady-tails/
+Disallow: /steady-tails/*
+Disallow: /steady-tails/privacy-policy
+Disallow: /steady-tails/terms-of-service

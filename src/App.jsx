@@ -1,16 +1,7 @@
-import React, { useEffect } from 'react';
-import SteadyTailsPrivacy from './pages/SteadyTailsPrivacy';
-import SteadyTailsTerms from './pages/SteadyTailsTerms';
+import { useEffect } from 'react';
 
 function App() {
-  const path = window.location.pathname.toLowerCase();
-
   useEffect(() => {
-    // Only run animation on the landing page
-    if (path !== '/' && path !== '') {
-      return;
-    }
-
     let animationFrameId;
     
     const handleMouseMove = (e) => {
@@ -36,16 +27,7 @@ function App() {
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, [path]);
-
-  // Client-side router path checks
-  if (path === '/steady-tails/privacy-policy' || path === '/steady-tails/privacy') {
-    return <SteadyTailsPrivacy />;
-  }
-
-  if (path === '/steady-tails/terms-of-service' || path === '/steady-tails/terms') {
-    return <SteadyTailsTerms />;
-  }
+  }, []);
 
   return (
     <div className="app-container">
@@ -76,4 +58,3 @@ function App() {
 }
 
 export default App;
-

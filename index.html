@@ -6,10 +6,48 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kozai Development Labs</title>
-    <meta name="description" content="Kozai Development Labs - App Development Studio based in New Mexico." />
+    <meta name="description" content="Kozai Development Labs - App Development Studio based in New Mexico. Makers of SteadyTails, a pet wellness and care tracking app for dogs and cats." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.kozailabs.com/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.kozailabs.com/#organization",
+            "name": "Kozai Development Labs LLC",
+            "url": "https://www.kozailabs.com/",
+            "logo": "https://www.kozailabs.com/kozai_development_labs_logo.png",
+            "description": "App development studio based in New Mexico.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "NM",
+              "addressCountry": "US"
+            },
+            "owns": { "@id": "https://steadytails.app/#software" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://steadytails.app/#software",
+            "name": "SteadyTails",
+            "url": "https://steadytails.app",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "iOS, Android",
+            "description": "Pet wellness and care tracking for dogs and cats. Track daily happiness, energy, appetite, and comfort, and see what actually helps. Meals, routines, and medications, shared by your household.",
+            "image": "https://www.kozailabs.com/steadytails_icon.png",
+            "publisher": { "@id": "https://www.kozailabs.com/#organization" },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

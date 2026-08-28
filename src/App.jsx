@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ProductsSection from './components/ProductsSection';
 
 function App() {
   useEffect(() => {
@@ -39,15 +40,35 @@ function App() {
       </div>
       
       <main className="content">
-        <div className="logo-container">
-          <img 
-            src="/kozai_development_labs_logo.png" 
-            alt="Kozai Development Labs Logo" 
-            className="logo"
-          />
-        </div>
-        
-        <h1 className="title">Kozai Development Labs</h1>
+        <section className="hero-section">
+          <div className="logo-container">
+            <img 
+              src="/kozai_development_labs_logo.png" 
+              alt="Kozai Development Labs Logo" 
+              className="logo"
+            />
+          </div>
+
+          <h1 className="title">Kozai Development Labs</h1>
+
+          <a className="scroll-cue" href="#products" aria-label="Jump to our products">
+            <span>Our Products</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 5v14" />
+              <path d="m5 12 7 7 7-7" />
+            </svg>
+          </a>
+        </section>
+
+        <ProductsSection />
       </main>
 
       <footer className="footer">
